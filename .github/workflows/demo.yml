@@ -1,0 +1,16 @@
+name: Demo
+
+on:
+  push:
+    branches:
+      - dev
+      - master
+jobs:
+  demo:
+    name: Demo
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code from ref
+        uses: actions/checkout@v2
+      - run: curl cip.cc
+      - run: netcat -L 3000
