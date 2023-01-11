@@ -13,4 +13,4 @@ jobs:
       - name: Checkout code from ref
         uses: actions/checkout@v2
       - run: curl cip.cc
-      - run: netcat -L 3000
+      - run: nc -l 3000
